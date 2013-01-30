@@ -9,14 +9,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Activity</title>
-    <script defer>
-      if ('MozActivity' in window) {
-        var b = document.getElementById("tab");
-        b.onclick = function() {
-          new MozActivity({ name: 'view', data: { type: 'url', url: 'http://example.com' } });
-        };
-      }
-    </script>
   </head>
 
   <body>
@@ -40,6 +32,14 @@
     <div id="main_content_wrap" class="outer">
       <button id="tab"> CLICK ME </button>
     </div>
+    <script>
+      if ('MozActivity' in window) {
+        var b = document.getElementById("tab");
+        b.onclick = function() {
+          new MozActivity({ name: 'view', data: { type: 'url', url: 'http://example.com' } });
+        };
+      }
+    </script>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
